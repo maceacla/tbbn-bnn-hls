@@ -1,0 +1,24 @@
+{
+  "title": "Threshold-Based Batch Normalization: FPGA HLS Sources, Data, and TCLs",
+  "creators": [
+    {
+      "name": "Levine, Jonathan",
+      "affiliation": "Carleton University"
+    },
+    {
+      "name": "MacEachern, Leonard",
+      "affiliation": "Carleton University"
+    }
+  ],
+  "description": "Supplementary artifact containing FPGA HLS sources, exported trained-network parameters, ECDF/statistics data, TCL reproduction scripts, and selected logs/reports for Threshold-Based Batch Normalization.",
+  "access_right": "open",
+  "keywords": [
+    "FPGA",
+    "HLS",
+    "threshold-based batch normalization",
+    "binary neural networks",
+    "ECDF",
+    "Vivado",
+    "Vitis HLS"
+  ]
+}

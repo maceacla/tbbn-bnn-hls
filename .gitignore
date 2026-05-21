@@ -1,0 +1,42 @@
+# Python/local tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS/editor noise
+.DS_Store
+*~
+NOTES.md
+
+# AMD/Xilinx generated project state
+**/.Xil/
+**/binarynet/
+**/BinaryNet/
+**/BinaryNet.gen/
+**/BinaryNet.cache/
+**/BinaryNet.runs/
+**/BinaryNet.sim/
+**/*.gen/
+**/*.cache/
+**/*.runs/
+**/*.sim/
+**/*.hw/
+**/*.srcs/
+**/*.ip_user_files/
+**/.vscode/
+**/logs/
+**/project.cache/
+**/project.hw/
+**/project.ip_user_files/
+**/project.runs/
+**/project.sim/
+*.jou
+*.pb
+*.xpr
+*.str
+*.wdb
+*.vcd
+
+# Keep large data under Git LFS, not ordinary Git blobs.
+# Do not ignore datas/*.csv.

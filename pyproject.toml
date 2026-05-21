@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tbbn-bnn-hls"
+version = "1.0.0"
+description = "Python dependencies for the TBBN FPGA HLS analysis scripts."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "matplotlib>=3.7",
+  "numpy>=1.24",
+  "pandas>=2.0",
+]
+
+[tool.setuptools]
+py-modules = []
