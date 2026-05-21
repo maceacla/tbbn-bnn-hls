@@ -10,15 +10,26 @@
       "affiliation": "Carleton University"
     }
   ],
-  "description": "Supplementary artifact containing FPGA HLS sources, exported trained-network parameters, ECDF/statistics data, TCL reproduction scripts, and selected logs/reports for Threshold-Based Batch Normalization.",
+  "description": "Supplementary artifact for the IEEE Embedded Systems Letters manuscript \"Threshold-Based Batch Normalization for Integer-Only Binarized Neural Network Inference\" by Jonathan Levine and Leonard MacEachern. The package contains FPGA HLS sources, exported trained-network parameters, ECDF/statistics data, TCL reproduction scripts, selected logs and reports, and helper scripts for the MNIST, CERN jet-substructure tagging, and UNSW-NB15 workloads. It supports the paper's threshold-export formulation for integer-only dense BNN inference and the Alveo U250 HLS results reported in the manuscript. Repository: https://github.com/maceacla/tbbn-bnn-hls",
   "access_right": "open",
   "keywords": [
     "FPGA",
     "HLS",
     "threshold-based batch normalization",
-    "binary neural networks",
+    "binarized neural networks",
+    "integer-only inference",
+    "low-latency inference",
     "ECDF",
     "Vivado",
     "Vitis HLS"
+  ],
+  "license": "cc-by-4.0",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/maceacla/tbbn-bnn-hls/tree/v2.0",
+      "relation": "isSupplementTo",
+      "resource_type": "software",
+      "scheme": "url"
+    }
   ]
 }
