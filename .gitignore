@@ -26,6 +26,7 @@ NOTES.md
 **/*.ip_user_files/
 **/.vscode/
 **/logs/
+**/reports/
 **/project.cache/
 **/project.hw/
 **/project.ip_user_files/
@@ -38,5 +39,14 @@ NOTES.md
 *.wdb
 *.vcd
 
-# Keep large data under Git LFS, not ordinary Git blobs.
-# Do not ignore datas/*.csv.
+# Reproducible generated data and implementation artifacts
+datas/*.csv
+**/src/hls.csv
+*.saif
+*.rpt
+*.bit
+*.xsa
+*.hwh
+*.safetensor
+*.zip
+*.tar

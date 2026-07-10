@@ -8,8 +8,8 @@ This repository is a supporting package for the IEEE ESL manuscript.
 - `hls/*/config*/src/`: C/C++ HLS source files.
 - `hls/*/config*/tb/`: Verilog testbenches used for SAIF and power reruns.
 - `hls/*/config*/*.tcl`: Vitis HLS, Vivado implementation, SAIF, and power scripts.
-- `hls/*/config*/reports/`: selected checked-in reports.
-- `datas/`: ECDF and margin/statistics CSV files used by the diagnostic scripts.
+- `hls/*/config*/reports/`: generated SAIF and power reports (not versioned).
+- `datas/`: generated ECDF and margin/statistics CSV files (not versioned).
 - `scripts/`: Python scripts for ECDF, margin, scatter, and summary-statistic plots.
 - `stats.md`: paper-facing FPGA metric snapshot.
 - `run.sh`: top-level helper for rerunning all HLS configurations.
@@ -18,18 +18,15 @@ The trained network weights and exported thresholds are embedded directly in the
 HLS parameter headers, primarily the `*_params.h` files under each configuration
 source directory.
 
-## Large Files
+## Generated Data Policy
 
-Large CSV and artifact files are tracked with Git LFS. After cloning, install Git
-LFS and fetch the large files:
+This repository contains the source needed to reproduce the results, not generated
+data or tool outputs. CSV datasets under `datas/`, per-configuration `reports/`
+directories, SAIF files, implementation reports, bitstreams, and hardware export
+files are intentionally excluded from version control. This keeps source archives
+small and avoids requiring Git LFS for a reproducible release.
 
-```bash
-git lfs install
-git lfs pull
-```
-
-The `datas/*.csv` files are intentionally part of the reproducibility package and
-are stored through Git LFS instead of ordinary Git blobs.
+`stats.md` is the compact, paper-facing record of the reported FPGA metrics.
 
 ## Reproducing HLS Results
 
@@ -50,14 +47,15 @@ To rerun all configurations:
 ./run.sh
 ```
 
-The top-level script fetches Git LFS payloads when Git LFS is available, then
-runs every HLS configuration. Each configuration recreates its generated
+The top-level script runs every HLS configuration. Each configuration recreates its generated
 `binarynet/`, `logs/`, and `reports/` outputs from the checked-in source,
 testbench, and TCL files.
 
 ## ECDF And Statistics
 
-The ECDF and diagnostic scripts operate on the CSV files in `datas/`.
+The ECDF and diagnostic scripts operate on regenerated CSV files placed in
+`datas/`. These generated inputs and any resulting plots are not part of the
+source archive.
 Create a virtual environment and install the Python dependencies from
 `pyproject.toml` before running them:
 
